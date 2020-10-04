@@ -1,66 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-02T13:23:51" hostname="DESKTOP-0VRD21S" time="0.298">
+<testsuite name="Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-04T10:52:41" hostname="DESKTOP-0VRD21S" time="0.49">
   <properties/>
-  <testcase name="start" classname="Test" time="0.298"/>
+  <testcase name="start" classname="Test" time="0.49"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 > /help
-The program calculates the sum of numbersexpressions like these: 4 + 6 - 8, 2 - 3 - 4, this way: 2 -- 2 equals 2 - (-2) equals 2 + 2.
+The program support for multiplication *, integer division / and parentheses (...). They have a higher priority than addition + and subtraction - 3 + 8 * ((4 + 3) * 2 + 1) - 6 / (2 + 1) The result is 121.
 > 
-> 5 + 1 + 4
-10
-> 23 - 17 - 13
--7
+> n = 32
 > 33 + 20 + 11 + 49 - 32 - 9 + 1 - 80 + 4
 -3
-> 11 - 7 - 4
+> 33 + 20 + 11 + 49 - n - 9 + 1 - 80 + 4
+-3
+> c = n 
+> c = 2
+>   c  
+2
+> 11 - 13 + c
 0
+> 5 --- 2 ++++++ 4 -- 2 ---- 1
+10
 > /start
 Unknown command
-> /exit
-Bye!
-?[1;31m
-Start test 2?[0m
-> n = 5
-> m=2
-> a    =  7
-> c=  a 
-> a
-7
-> c
-7
-> test = 0
-> test
-0
-> test = 1
-> a = test
-> a
-1
-> /exit
-Bye!
-?[1;31m
-Start test 3?[0m
-> a = 9
-> b=2
-> c = 1
-> a + b
-11
-> b - a
--7
-> b + c
-3
-> b - c
-1
-> a -- b - c + 3 --- a ++ 1
-5
-> /exit
-Bye!
-?[1;31m
-Start test 4?[0m
 > var1 = 1
 Invalid identifier
-> кириллица = 123
-invalid
 > var = 2a
 Invalid assignment
 > c = 7 - 1 = 5
@@ -69,7 +32,61 @@ invalid
 Unknown variable
 > variable = 777
 > Variable
-Unknown variable
+unknown
+> variable = 777
+> Variable
+unknown
+> /exit
+Bye!
+?[1;31m
+Start test 2?[0m
+> 4 * 3
+12
+> 91 / 13
+7
+>  a= 7 
+>  b =2
+> a * 4 / b - (3 - 1)
+12
+> /exit
+Bye!
+?[1;31m
+Start test 3?[0m
+> 7 + 3 * ((4 + 3) * 7 + 1) - 6 / (2 + 1)
+155
+> /exit
+Bye!
+?[1;31m
+Start test 4?[0m
+> 8 * (2 + 3
+Invalid
+> 4 + 5)
+Invalid
+> 2 ************ 2
+invalid
+> 2 // 2
+invalid
+> /exit
+Bye!
+?[1;31m
+Start test 5?[0m
+> n = 32000000000000000000
+> 33000000000000000000 + 20000000000000000000 + 11000000000000000000 + 49000000000000000000 - 32000000000000000000 - 9000000000000000000 + 1000000000000000000 - 80000000000000000000 + 4000000000000000000 + 1
+-2999999999999999999
+> 33000000000000000000 + 20000000000000000000 + 11000000000000000000 + 49000000000000000000 - n - 9000000000000000000 + 1000000000000000000 - 80000000000000000000 + 4000000000000000000 + 1
+-2999999999999999999
+> c = n 
+> c = 2000000000000000000000
+>   c   
+2000000000000000000000
+> 11000000000000000000 - 9000000000000000000 - c + 1998000000000000000000
+0
+> 5000000000000000000 --- 2000000000000000000 ++++++ 4000000000000000000 -- 2000000000000000000 ---- 1000000000000000000
+10000000000000000000
+>  a= 7000000000000000000 
+>  b =2000000000000000000
+> a * 4000000000000000000 / b - (3000000000000000000 - 1000000000000000000)
+12000000000000000000
 > /exit
 Bye!
 ]]></system-out>
